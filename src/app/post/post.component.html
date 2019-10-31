@@ -23,10 +23,13 @@
 
       <div class="container">
 
-        <app-post-comments [post]='post'
-        *ngIf='post.showComments; else reveal'
-        (newCommentEvent)='postComment($event,i)'
-        ></app-post-comments>
+        <div *ngIf='post.showComments; else reveal'>
+            <span (click)="hideComments(i)" class="badge bg-moringa-alpha-7 text-white p-2 cursor-pointer">
+              Hide comments                
+              </span>
+            <app-post-comments [post]='post' (newCommentEvent)='postComment($event,i)'></app-post-comments>
+        </div>
+        
 
         <ng-template #reveal>
           <span (click)="showComments(i)" class="badge bg-moringa-alpha-7 text-white p-2 cursor-pointer">Show comments on this post

@@ -25,6 +25,7 @@ export class PostComponent implements OnInit {
   }
 
   showComments(index:number){this.posts[index].showComments=true;}
+  hideComments(index:number){this.posts[index].showComments=false;}
 
   postIssue(post:Post){
     post.id=this.posts.length+1;
