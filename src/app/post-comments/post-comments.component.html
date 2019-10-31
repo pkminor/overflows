@@ -1,4 +1,4 @@
-<app-post-comment-form></app-post-comment-form>
+<app-post-comment-form [name]='name' (newCommentEvent)='postComment($event)'></app-post-comment-form>
 
 <div class="mb-3" *ngFor='let comment of post.comments'>
 

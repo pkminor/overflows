@@ -2,7 +2,7 @@
 
 <div class="postmain mt-5">
 
-  <app-post-form [categories]='categories'></app-post-form>
+  <app-post-form [categories]='categories' (newPostEvent)='postIssue($event)'></app-post-form>
 
   <div class="card  mb-3" *ngFor='let post of posts;let i=index'>
 
@@ -23,7 +23,10 @@
 
       <div class="container">
 
-        <app-post-comments [post]='post' *ngIf='post.showComments; else reveal'></app-post-comments>
+        <app-post-comments [post]='post'
+        *ngIf='post.showComments; else reveal'
+        (newCommentEvent)='postComment($event,i)'
+        ></app-post-comments>
 
         <ng-template #reveal>
           <span (click)="showComments(i)" class="badge bg-moringa-alpha-7 text-white p-2">Show comments on this post

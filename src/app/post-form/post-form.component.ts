@@ -17,6 +17,6 @@ export class PostFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  postIssue(){ this.newPostEvent.emit(this.newPost); alert("issue Posted") }
+  postIssue(){ this.newPostEvent.emit(this.newPost); }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
+import { Comment } from '../comment';
 import { PostService } from '../post-service/post.service';
 
 @Component({
@@ -22,5 +23,17 @@ export class PostComponent implements OnInit {
   }
 
   showComments(index:number){this.posts[index].showComments=true;}
+
+  postIssue(post:Post){
+    post.id=this.posts.length+1;
+    this.posts.push(post);
+  }
+
+  postComment(comment:Comment,index:number){
+    comment.id = this.posts[index].comments.length+1;
+    comment.commentDate= new Date();
+    comment.username= "commenting user";
+    this.posts[index].comments.push(comment);
+  }
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {Post} from '../post';
+import {Comment} from '../comment';
 
 
 @Component({
@@ -9,10 +10,24 @@ import {Post} from '../post';
 })
 export class PostCommentsComponent implements OnInit {
 
+  name:string="My name";
   @Input() post:Post;
-  constructor() { }
+  @Output() newCommentEvent = new EventEmitter<Comment>();
+  constructor() {
+
+  }
 
   ngOnInit() {
+
+  }
+
+  postComment(comment:Comment){
+    this.newCommentEvent.emit(comment);
+
+    this.post.comments =
+    this.post.comments.sort((left,right)=>{
+      return (left.id>right.id)? -1:1;
+    });
   }
 
 }
