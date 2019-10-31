@@ -2,6 +2,29 @@
 
 <app-post-nav></app-post-nav>
 
-<div class="postmain">
+<div class="postmain mt-5">
+  <div class="card  mb-3" *ngFor='let post of posts'>
 
+    <div class="card-header">
+      <span> <i class="fa fa-user-circle fa-2x mr-2 p-1 shadow-sm bg-white rounded-circle"></i>
+         {{post.username}}
+      </span>
+    </div>
+
+    <div class="card-body">
+
+      <h5 class="card-title">{{post.category}}</h5>
+      <p class="card-text">{{post.title}}</p>
+
+      <div class="container">
+        {{post.content}}
+      </div>
+
+    </div>
+
+    <div class="card-footer card-text text-white">
+      {{post.postDate}}
+    </div>
+
+  </div>
 </div>

@@ -1,8 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-body { background-color:#EEEEEE;user-select:none;font-family: "Trebuchet MS", Helvetica, sans-serif;}
+body { background-color:#eeeeee;user-select:none;font-family: "Trebuchet MS", Helvetica, sans-serif;
+ background-image: url('./assets/main-logo.png');
+ background-position:center;
+ background-size: cover;
+ background-attachment:fixed;
+}
 
 .postbar{background-color:#627C33}
-.postnav{position:fixed;top:0;left:0;width:20%;height:100%;overflow:auto}
+.postnav{position:fixed;top:0;left:0;width:20%;height:100%;overflow:auto;}
 .postmain{width:60%;margin:auto;}
 
-.logo {background-image:url('./assets/main-logo.png');}
+.logo {background-image: url('./assets/main-logo.png');
+background-position:center;
+background-size: cover;
+ }
