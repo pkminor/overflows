@@ -1,0 +1,28 @@
+<div class="mb-3" *ngFor='let comment of post.comments'>
+
+  <div class="row">
+
+    <div class="col-1">
+      <span> <i class="fa fa-user-circle  mr-2 p-1 shadow-sm bg-white rounded-circle"></i>
+      </span>
+    </div> <!--End user icon col-->
+
+    <div class="col-11">
+
+      <div class="row mb-2">
+        {{comment.username}}
+      </div>
+
+      <div class="row">
+        {{comment.content}}
+      </div>
+
+      <div class="row">
+        <span class="badge mt-2">On {{comment.commentDate}}</span>
+      </div>
+
+    </div> <!--End content col-->
+
+  </div> <!--End comments row -->
+
+</div> <!--End comments loop -->

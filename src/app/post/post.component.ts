@@ -8,13 +8,16 @@ import {PostService} from '../post-service/post.service';
 })
 
 export class PostComponent implements OnInit {
+
   posts:Post[];
   ls:number[]=[];
-  constructor(postservice:PostService) {   for(var i=0; i<100; i++) this.ls.push(i); 
+  constructor(postservice:PostService) { //for(var i=0; i<100; i++) this.ls.push(i);
      this.posts=postservice.getPosts();
   }
 
   ngOnInit() {
   }
+
+  showComments(index:number){this.posts[index].showComments=true;}
 
 }

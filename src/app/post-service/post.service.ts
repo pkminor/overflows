@@ -8,9 +8,9 @@ import {Comment} from '../comment';
 export class PostService {
 
   posts:Post[]=[
-    new Post(0,"user","Initializing angular forms","angular","How do we preset form values in angular?",[]),
-    new Post(1,"user","Node nvm vs npm","node","Why should i use nvm over npm?",[]),
-    new Post(2,"user","Python frameworks","python","What is the difference between flask and django?",[])
+    new Post(0,"user","Initializing angular forms","angular","How do we preset form values in angular?"),
+    new Post(1,"user","Node nvm vs npm","node","Why should i use nvm over npm?"),
+    new Post(2,"user","Python frameworks","python","What is the difference between flask and django?")
   ];
 
   constructor() { }
