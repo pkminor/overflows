@@ -16,6 +16,6 @@ export class PostCommentFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  postComment(){ this.newCommentEvent.emit(newComment); }
+  postComment(){ this.newCommentEvent.emit(this.newComment); alert("comment posted"); }
 
 }

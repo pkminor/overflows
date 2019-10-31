@@ -11,16 +11,21 @@
 
     <div class="row">
       <form #postCommentForm='ngForm' (ngSubmit)="postComment()">
-        <div class="form-group">
-          <input type="text"
+
+        <div class="input-group">
+          <textarea cols="70" rows="3"
           class="form-control"
           name="comment" id="comment" #comment='ngModel'
           [(ngModel)]='newComment.content'
-          placeholder="Type your comment..."
-          >
+          placeholder="Type your comment...">
+          </textarea>
+
+          <div class="input-group-append">
+            <button class="btn bg-moringa text-white font-weight-bolder shadow-sm">Post comment</button>
+          </div>
         </div>
 
-        <button class="btn btn-post text-white font-weight-bolder shadow-sm">Post comment</button>
+
       </form>
     </div>
 

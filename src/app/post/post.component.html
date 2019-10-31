@@ -1,8 +1,9 @@
-<app-post-bar></app-post-bar>
-
 <app-post-nav></app-post-nav>
 
 <div class="postmain mt-5">
+
+  <app-post-form [categories]='categories'></app-post-form>
+
   <div class="card  mb-3" *ngFor='let post of posts;let i=index'>
 
     <div class="card-header">
@@ -25,8 +26,8 @@
         <app-post-comments [post]='post' *ngIf='post.showComments; else reveal'></app-post-comments>
 
         <ng-template #reveal>
-          <span (click)="showComments(i)" class="badge tag-bg-1 text-white p-2">Show comments on this post
-            <span class="badge badge-pill bg-success p-2 font-weight-bolder">{{post.comments.length}}</span>
+          <span (click)="showComments(i)" class="badge bg-moringa-alpha-7 text-white p-2">Show comments on this post
+            <span class="badge badge-pill bg-moringa p-2 font-weight-bolder">{{post.comments.length}}</span>
           </span>
         </ng-template>
 
@@ -34,7 +35,7 @@
 
     </div><!-- End Card Body -->
 
-    <div class="card-footer card-text text-white">
+    <div class="card-footer card-text text-white bg-moringa-alpha-7">
       Posted on {{post.postDate}}
     </div>
 
