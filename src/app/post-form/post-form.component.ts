@@ -17,6 +17,9 @@ export class PostFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  postIssue(){ this.newPostEvent.emit(this.newPost); }
+  postIssue(){ 
+    this.newPostEvent.emit(this.newPost);
+    this.newPost = new Post(0,"","","","");
+   }
 
 }

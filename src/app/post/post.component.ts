@@ -28,6 +28,7 @@ export class PostComponent implements OnInit {
 
   postIssue(post:Post){
     post.id=this.posts.length+1;
+    post.postDate=new Date();
     this.posts.push(post);
     this.posts=this.posts.sort((left,right)=>{ return (left.id>right.id)? -1:1; });
   }
