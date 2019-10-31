@@ -29,6 +29,7 @@ export class PostComponent implements OnInit {
   postIssue(post:Post){
     post.id=this.posts.length+1;
     this.posts.push(post);
+    this.posts=this.posts.sort((left,right)=>{ return (left.id>right.id)? -1:1; });
   }
 
   postComment(comment:Comment,index:number){
@@ -36,7 +37,7 @@ export class PostComponent implements OnInit {
     comment.commentDate= new Date();
     comment.username= "commenting user";
     this.posts[index].comments.push(comment);
-    this.posts=this.posts.sort((left,right)=>{ return (left.id>right.id)? -1:1; });
+    
   }
 
 }
