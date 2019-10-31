@@ -19,3 +19,5 @@ background-size: cover;
  input{border:0}
  .bg-moringa{background-color:#627C33}
  .bg-moringa-alpha-7 {background-color:rgba(98, 124, 51,0.7);}
+
+ .cursor-pointer{cursor:pointer;}

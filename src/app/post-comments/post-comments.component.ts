@@ -10,7 +10,7 @@ import {Comment} from '../comment';
 })
 export class PostCommentsComponent implements OnInit {
 
-  name:string="My name";
+  name:string="Post content";
   @Input() post:Post;
   @Output() newCommentEvent = new EventEmitter<Comment>();
   constructor() {

@@ -1,6 +1,6 @@
 <app-post-comment-form [name]='name' (newCommentEvent)='postComment($event)'></app-post-comment-form>
 
-<div class="mb-3" *ngFor='let comment of post.comments'>
+<div class="mb-3 animated fadeIn" *ngFor='let comment of post.comments'>
 
     <hr>
 
@@ -32,5 +32,5 @@
 </div> <!--End comments loop -->
 
 <div class="mt-2">
-  <span class="bagde badge-pill bg-moringa p-2 text-white float-right">Show more comments...</span>
+  <span routerLink="comments" class="bagde badge-pill bg-moringa p-2 text-white float-right cursor-pointer">Show more comments...</span>
 </div>

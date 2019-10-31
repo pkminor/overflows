@@ -15,7 +15,9 @@ export class PostComponent implements OnInit {
   ls:number[]=[];
   categories:string[]=[];
   constructor(postservice:PostService) { //for(var i=0; i<100; i++) this.ls.push(i);
-     this.posts=postservice.getPosts();
+     this.posts=postservice.getPosts()
+     this.posts=this.posts.sort((left,right)=>{ return (left.id>right.id)? -1:1; });
+
      this.categories=postservice.getCategories();
   }
 
@@ -34,6 +36,7 @@ export class PostComponent implements OnInit {
     comment.commentDate= new Date();
     comment.username= "commenting user";
     this.posts[index].comments.push(comment);
+    this.posts=this.posts.sort((left,right)=>{ return (left.id>right.id)? -1:1; });
   }
 
 }

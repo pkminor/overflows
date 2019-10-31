@@ -20,8 +20,11 @@ export class PostCommentFormComponent implements OnInit {
   }
 
   postComment(){
+
+    if(this.newComment.content.length>0){
     this.newCommentEvent.emit(this.newComment);
     this.newComment= new Comment(0,"",1,"",new Date("2019-01-01"));
+    }
 }
 
 }
