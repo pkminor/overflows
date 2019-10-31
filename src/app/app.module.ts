@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { PostComponent } from './post/post.component';
 import { PostBarComponent } from './post-bar/post-bar.component';
 import { PostNavComponent } from './post-nav/post-nav.component';
 import { PostCommentsComponent } from './post-comments/post-comments.component';
+import { PostCommentFormComponent } from './post-comment-form/post-comment-form.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { PostCommentsComponent } from './post-comments/post-comments.component';
     PostComponent,
     PostBarComponent,
     PostNavComponent,
-    PostCommentsComponent
+    PostCommentsComponent,
+    PostCommentFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
