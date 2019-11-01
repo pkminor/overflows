@@ -10,7 +10,7 @@
     <form #postForm='ngForm' (ngSubmit)='postIssue()'>
 
       <div class="form-group">
-        <input type="text" class="form-control"
+        <input type="text" class="form-control bg-moringa-sh bg-bs-success-sh"
         name="title" id="title" #title='ngModel'
         [(ngModel)]="newPost.title"
         Placeholder="Post title..."
@@ -20,14 +20,14 @@
       <div class="form-group">
         <textarea
           name="content" id="content" cols="5" rows="3"
-          class="form-control" #content='ngModel' [(ngModel)]='newPost.content'
+          class="form-control bg-moringa-sh bg-bs-success-sh" #content='ngModel' [(ngModel)]='newPost.content'
           placeholder="Type your post here...">
         </textarea>
       </div>
 
       <label for="category">Select post category</label>
       <div class="input-group">
-        <select class="custom-select"
+        <select class="custom-select bg-moringa-sh bg-bs-success-sh"
         name="category" id="category" #category='ngModel'
         [(ngModel)]='newPost.category'>
         <option *ngFor='let category of categories; let i=index' id={{i}}>{{category}}</option>
